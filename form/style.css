@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #edf4ee;
+  color: #203c2c;
+  line-height: 1.5;
+}
+header {
+  max-width: 810px;
+  margin: 30px auto 0;
+  padding: 24px 30px;
+  background: white;
+  color: #203c2c;
+  text-align: left;
+  border: 1px solid #cddfd1;
+  border-top: 10px solid #207443;
+  border-radius: 8px;
+}
+header p {
+  margin: 10px 0 0;
+  color: #53665a;
+}
+h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: normal;
+}
+main {
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+form {
+  background: white;
+  padding: 30px;
+  border: 1px solid #cddfd1;
+  border-radius: 12px;
+}
+h2 {
+  margin-top: 0;
+}
+.introduccion {
+  color: #53665a;
+}
+fieldset {
+  margin: 26px 0;
+  padding: 20px;
+  border: 1px solid #cddfd1;
+  border-radius: 8px;
+}
+legend {
+  padding: 0 10px;
+  font-weight: bold;
+  color: #165b39;
+  font-size: 19px;
+}
+.campos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.completo {
+  grid-column: 1 / -1;
+}
+label,
+.titulo-opciones {
+  font-weight: bold;
+  font-size: 14px;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #aabfb0;
+  border-radius: 5px;
+  font: inherit;
+  color: #203c2c;
+  background: #fff;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  accent-color: #207443;
+}
+input[type="range"] {
+  accent-color: #207443;
+  padding: 0;
+}
+.opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+}
+.opciones label,
+.aceptacion {
+  font-weight: normal;
+}
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+small {
+  color: #5c6e61;
+}
+button {
+  padding: 14px 26px;
+  background: #165b39;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover {
+  background: #10462b;
+}
+.acciones {
+  margin-top: 22px;
+}
+footer {
+  text-align: center;
+  padding: 0 20px 28px;
+  color: #53665a;
+  font-size: 14px;
+}

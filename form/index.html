@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscripción | Colegio Solo Distri</title>
+    <link rel="stylesheet" href="./form/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Colegio Solo Distri</h1>
+      <p>Formulario oficial de inscripción estudiantil</p>
+    </header>
+    <main>
+      <form id="inscripcion">
+        <h2>Formulario de inscripción</h2>
+        <p class="introduccion">
+          Por favor, completa la información del estudiante y del acudiente responsable. Los campos marcados con un asterisco (*) son obligatorios.
+        </p>
+        <input type="hidden" name="colegio" value="solo-distri" />
+        
+        <fieldset>
+          <legend>1. Datos del estudiante</legend>
+          <div class="campos">
+            <div class="campo">
+              <label for="nombres">Nombres *</label>
+              <input type="text" id="nombres" name="nombres" placeholder="Ingrese nombres completos" required />
+            </div>
+            <div class="campo">
+              <label for="apellidos">Apellidos *</label>
+              <input type="text" id="apellidos" name="apellidos" placeholder="Ingrese apellidos completos" required />
+            </div>
+            <div class="campo">
+              <label for="tipoDocumento">Tipo de documento *</label>
+              <select id="tipoDocumento" name="tipoDocumento" required>
+                <option value="">Selecciona una opción</option>
+                <option value="registroCivil">Registro civil</option>
+                <option value="tarjetaIdentidad">Tarjeta de identidad</option>
+                <option value="cedulaCiudadania">Cédula de ciudadanía</option>
+                <option value="documentoExtranjeria">Documento de extranjería</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="documento">Número de documento *</label>
+              <input type="text" id="documento" name="documento" placeholder="Número de documento de identidad" required />
+            </div>
+            <div class="campo">
+              <label for="nacimiento">Fecha de nacimiento *</label>
+              <input type="date" id="nacimiento" name="nacimiento" required />
+            </div>
+            <div class="campo">
+              <label for="hermanos">Número de hermanos</label>
+              <input type="number" id="hermanos" name="hermanos" min="0" step="1" value="0" />
+            </div>
+            <div class="campo completo">
+              <label for="direccion">Dirección de residencia *</label>
+              <input type="text" id="direccion" name="direccion" placeholder="Dirección, número y barrio" required />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Información académica</legend>
+          <div class="campos">
+            <div class="campo">
+              <label for="grado">Grado al que ingresa *</label>
+              <select id="grado" name="grado" required>
+                <option value="">Selecciona el grado</option>
+                <option>Transición</option>
+                <option>Primero</option>
+                <option>Segundo</option>
+                <option>Tercero</option>
+                <option>Cuarto</option>
+                <option>Quinto</option>
+                <option>Sexto</option>
+                <option>Séptimo</option>
+                <option>Octavo</option>
+                <option>Noveno</option>
+                <option>Décimo</option>
+                <option>Undécimo</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="ingreso">Mes de ingreso</label>
+              <input type="month" id="ingreso" name="ingreso" />
+            </div>
+            <fieldset class="completo" style="margin: 0">
+              <legend>Jornada *</legend>
+              <div class="opciones">
+                <label><input type="radio" name="jornada" value="manana" required /> Mañana</label>
+                <label><input type="radio" name="jornada" value="tarde" /> Tarde</label>
+              </div>
+            </fieldset>
+            <fieldset class="completo" style="margin: 0">
+              <legend>Actividades de interés</legend>
+              <div class="opciones">
+                <label><input type="checkbox" name="actividades" value="deportes" /> Deportes</label>
+                <label><input type="checkbox" name="actividades" value="musica" /> Música</label>
+                <label><input type="checkbox" name="actividades" value="arte" /> Arte</label>
+                <label><input type="checkbox" name="actividades" value="robotica" /> Robótica</label>
+              </div>
+            </fieldset>
+            <div class="campo completo">
+              <label for="ingles">¿Cómo calificas tu nivel de inglés? (de 1 a 5)</label>
+              <input type="range" id="ingles" name="ingles" min="1" max="5" value="3" step="1" />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Datos del acudiente</legend>
+          <div class="campos">
+            <div class="campo">
+              <label for="acudiente">Nombre completo del acudiente *</label>
+              <input type="text" id="acudiente" name="acudiente" placeholder="Nombre completo del acudiente o tutor" required />
+            </div>
+            <div class="campo">
+              <label for="parentesco">Parentesco *</label>
+              <input type="text" id="parentesco" name="parentesco" list="parentescos" placeholder="Seleccione o escriba el parentesco" required />
+              <datalist id="parentescos">
+                <option value="Madre"></option>
+                <option value="Padre"></option>
+                <option value="Abuela o abuelo"></option>
+                <option value="Tutor legal"></option>
+              </datalist>
+            </div>
+            <div class="campo">
+              <label for="correo">Correo electrónico de contacto *</label>
+              <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required />
+            </div>
+            <div class="campo">
+              <label for="telefono">Teléfono de contacto *</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="Ej. 300 123 4567" required />
+            </div>
+            <div class="campo">
+              <label for="hora">Hora preferida de contacto</label>
+              <input type="time" id="hora" name="hora" />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>4. Visita y documentos</legend>
+          <div class="campos">
+            <div class="campo">
+              <label for="visita">Fecha y hora preferidas para la visita institucional</label>
+              <input type="datetime-local" id="visita" name="visita" />
+            </div>
+            <div class="campo">
+              <label for="induccion">Semana disponible para jornada de inducción</label>
+              <input type="week" id="induccion" name="induccion" />
+            </div>
+            <div class="campo completo">
+              <label for="archivos">Documentos de matrícula</label>
+              <input type="file" id="archivos" name="archivos" accept=".pdf,.jpg,.jpeg,.png" multiple />
+            </div>
+            <div class="campo completo">
+              <label for="observaciones">Observaciones adicionales</label>
+              <textarea id="observaciones" name="observaciones" placeholder="Indique cualquier antecedente médico, requerimiento especial u observación relevante."></textarea>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>5. Acceso al portal estudiantil</legend>
+          <div class="campo">
+            <label for="clave">Cree su contraseña de acceso *</label>
+            <input type="password" id="clave" name="clave" minlength="8" autocomplete="new-password" required />
+          </div>
+        </fieldset>
+
+        <label class="aceptacion">
+          <input type="checkbox" name="aceptacion" required />
+          Certifico que la información suministrada en este formulario es veraz y correcta. *
+        </label>
+
+        <div class="acciones">
+          <button type="submit">Enviar inscripción</button>
+        </div>
+      </form>
+    </main>
+    <footer>Colegio Solo Distri · Aprendemos juntos</footer>
+  </body>
+</html>
